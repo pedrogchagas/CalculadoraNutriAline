@@ -91,7 +91,8 @@
                           </form>
                     </div>
                 </div>
-              
+              </form>
+              <form id="calcForm">
                 <div id="segundaPergunta" style="display: none;">
                   <h2 class="text-center">Calculadora da Aline</h2>
                   <div class="form-group">
@@ -130,7 +131,7 @@
                               </div>
                             </div>
                         </div>
-
+                      
                         <div class="alert alert-danger" id="avisoPergunta2" role="alert" style="display: none;">
                             Selecione uma opção antes de avançar.
                         </div>
@@ -156,89 +157,94 @@
                         <option value="4">Atleta</option>
                     </select>  
                 </div> -->
-                <div id="terceiraPergunta" style="display: none;">
-                    <h2 class="text-center">Calculadora da Aline</h2>
-                    <div class="form-group">
-                        <label for="genero" class="fw-bold">Gênero: </label>
-                        <div>
-                            <label for="masculino" class="radio-inline"><input type="radio" name="genero" id="masculino"       value="Masculino">Masculino</label>
-                            <label for="feminino" class="radio-inline"><input type="radio" name="genero" id="feminino"     value="Feminino">Feminino</label>
-                        </div>
-                    </div>
-<br>       
-                    <div class="range">
-                        <div class="d-inline-block align-middle fw-bold">Idade: </div>
-                        <div class="d-inline-block align-middle text-end">
-                            <span id="idadeSlider"></span>
-                        </div>
-                        <input type="range" class="form-range" min="0" max="100" id="idadeRange">
-                    </div>
-<br>       
-                    <div class="range">
-                        <div class="d-inline-block align-middle fw-bold">Altura: </div>
-                        <div class="d-inline-block align-middle text-end">
-                            <span id="alturaSlider"></span>
-                        </div>
-                        <input type="range" class="form-range" min="130" max="230" id="alturaRange">
-                    </div>
-<br>       
-                    <div class="range">
-                        <div class="d-inline-block align-middle fw-bold">Peso: </div>
-                        <div class="d-inline-block align-middle text-end">
-                            <span id="pesoSlider"></span>
-                        </div>
-                        <input type="range" class="form-range" min="40" max="180" id="pesoRange">
-                    </div>
-<br>
-                    <div class="alert alert-danger" id="avisoPergunta3" role="alert" style="display: none;">
-                        Selecione um gênero antes de avançar.
-                    </div>
+                <div class="container">
+                  <div id="terceiraPergunta" style="display: none;">
+                      <h2 class="text-center">Calculadora da Aline</h2>
+                      <div class="form-group">
+                          <label for="genero" class="fw-bold">Gênero: </label>
+                          <div>
+                              <label for="masculino" class="radio-inline"><input type="radio" name="genero" id="masculino"        value="Masculino">Masculino</label>
+                              <label for="feminino" class="radio-inline"><input type="radio" name="genero" id="feminino"      value="Feminino">Feminino</label>
+                          </div>
+                      </div>
+<br>        
+                      <div class="range">
+                          <div class="d-inline-block align-middle fw-bold">Idade: </div>
+                          <div class="d-inline-block align-middle text-end">
+                              <span id="idadeSlider"></span>
+                          </div>
+                          <input type="range" class="form-range" min="0" max="100" id="idadeRange">
+                      </div>
+<br>        
+                      <div class="range">
+                          <div class="d-inline-block align-middle fw-bold">Altura: </div>
+                          <div class="d-inline-block align-middle text-end">
+                              <span id="alturaSlider"></span>
+                          </div>
+                          <input type="range" class="form-range" min="130" max="230" id="alturaRange">
+                      </div>
+<br>        
+                      <div class="range">
+                          <div class="d-inline-block align-middle fw-bold">Peso: </div>
+                          <div class="d-inline-block align-middle text-end">
+                              <span id="pesoSlider"></span>
+                          </div>
+                          <input type="range" class="form-range" min="40" max="180" id="pesoRange">
+                      </div>
+<br>  
+                      <div class="alert alert-danger" id="avisoPergunta3" role="alert" style="display: none;">
+                          Selecione um gênero antes de avançar.
+                      </div>
 
-                    <div class="form-group">
-                        <div class="d-grid gap-2">
-                            <input class="btn btn-primary" id="btnCalcular" type="submit" value="Calcular">
-                        </div>
-                    </div>
+                      <div class="form-group">
+                          <div class="d-grid gap-2">
+                              <input class="btn btn-primary" id="btnCalcular" type="submit" value="Calcular">
+                          </div>
+                      </div>
+                  </div>
                 </div>
 <br>
-                <div id="segundaDiv" style="display: none;">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <div class="d-flex align-items-center">
-                              <i class="fa-solid fa-fire me-3"></i>
-                              <div>
-                                <h5 class="card-title">Gasto Energético Diário:</h5>
-                                <p class="card-text" id="resultadoGasto"></p>
+                <div class="container">
+                  <div id="segundaDiv" style="display: none;">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-fire me-3"></i>
+                                <div>
+                                  <h5 class="card-title">Gasto Energético Diário:</h5>
+                                  <p class="card-text" id="resultadoGasto"></p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card">
-                          <div class="card-body">
-                            <div class="d-flex align-items-center">
-                              <i class="fa-solid fa-drumstick-bite me-3"></i>
-                              <div>
-                                <h5 class="card-title">Meta de Proteínas</h5>
-                                <p class="card-text" id="resultadoMeta"></p>
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="d-flex align-items-center">
+                                <i class="fa-solid fa-drumstick-bite me-3"></i>
+                                <div>
+                                  <h5 class="card-title">Meta de Proteínas</h5>
+                                  <p class="card-text" id="resultadoMeta"></p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <div class="col-md-12 mt-4">
+                          <h5>Agende sua consulta!</h5>
+                          <a href="https://wa.me/5527999873042?text=Ol%C3%A1%2C+tudo+bem%3F">Clique aqui para agendar uma consulta!</a>
+                        </div>
+<br>  
+                        <div class="d-flex justify-content-center">
+                          <button type="button" id="btnVoltar" class="btn btn-secondary">Voltar</button>
+                        </div>
                       </div>
-                      <div class="col-md-12 mt-4">
-                        <h5>Agende sua consulta!</h5>
-                        <a href="https://wa.me/5527999873042?text=Ol%C3%A1%2C+tudo+bem%3F">Clique aqui para agendar uma consulta!</a>
-                      </div>
-                      <div class="d-flex justify-content-center">
-                        <button type="button" id="btnVoltar" class="btn btn-secondary">Voltar</button>
-                      </div>
-                    </div>
+                  </div>
                 </div>
-            </form>
+              </form>
             </div>
           </div>
 
