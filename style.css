@@ -1,0 +1,96 @@
+.calculadora {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a3a3a3;
+}
+
+#primeiraPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+}
+
+
+#segundaPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+}
+
+#terceiraPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+}
+
+#segundaDiv {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+}
+
+#imagem {
+    height: 50px;
+    border-radius: 50%; 
+  }
+
+.card1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card1.selected {
+    border-color: blue;
+}
+
+.card2 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card2.selected {
+    border-color: blue;
+}
+
+#headerFixa {
+    /* position: -webkit-sticky;
+    position: sticky;
+    top: 0; */
+    background-color: #605f5f;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: #0d6efd;
+}
+
+input[type=range]::-moz-range-thumb {
+    background-color: #0d6efd;
+}
+
+input[type=range]::-ms-thumb {
+    background-color: #0d6efd;
+}
