@@ -90,10 +90,10 @@ function calculos(condicionamentoFisico, valorGenero, idade, altura, peso, valor
 
 var slider = document.getElementById("idadeRange");
 var output = document.getElementById("idadeSlider");
-output.innerHTML = slider.value;
+output.innerHTML = slider.value + ' anos';
 
 slider.oninput = function() {
-    output.innerHTML = this.value;
+    output.innerHTML = this.value + ' anos';
 }
 
 var slider2 = document.getElementById("alturaRange");
