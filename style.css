@@ -5,6 +5,10 @@ body {
     background: radial-gradient(circle, rgba(201,204,215,1) 0%, rgba(47,47,47,1) 100%) !important;
 }
 
+#agendeTexto {
+    color: rgb(247, 36, 36);
+}
+
 .calculadora {
     height: 100vh;
     display: flex;
