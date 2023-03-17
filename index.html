@@ -1,330 +1,113 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Calculadora de Proteínas</title>
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+    background: rgb(201,204,215) !important;
+    background: radial-gradient(circle, rgba(201,204,215,1) 0%, rgba(47,47,47,1) 100%) !important;
+}
 
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+#agendeTexto {
+    color: rgb(247, 36, 36);
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+.calculadora {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous" />
-</head>
-<body>
-    <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg fixed-top" id="headerFixa">
-        <div class="container">
-            <div class="navbar-brand" id="titulo">Nutricionista Aline Carvalho</div>
-            <img src="assets/fotoAline.jpg" id="imagem" alt="Foto" />
-        </div>
-    </nav>
+#primeiraPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+    background-color: #ededed;
+}
 
-    <!-- Page content-->
-    <div class="calculadora">
-        <div class="container">
-            <div class="row">
-                <form id="calcForm">
-                    <div id="primeiraPergunta">
-                        <h3 class="text-center">Calculadora de GET e Proteína</h3>
-                        <div class="form-group">
-                            <div class="container">
-                                <h6 class="fw-bold">
-                                    Qual condicionamento físico mais se assemelha ao seu atual:
-                                </h6>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card1" data-option="1">
-                                            <h2></h2>
-                                            <p>Abaixo do peso</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card1" data-option="2">
-                                            <h2></h2>
-                                            <p>Peso saudável</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card1" data-option="3">
-                                            <h2></h2>
-                                            <p>Muito acima do peso</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card1" data-option="4">
-                                            <h2></h2>
-                                            <p>Atleta</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="alert alert-danger"
-                                 id="avisoPergunta1"
-                                 role="alert"
-                                 style="display: none">
-                                Selecione uma opção antes de avançar.
-                            </div>
+#segundaPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+    background-color: #ededed;
+}
 
-                            <div class="form-group">
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary"
-                                            type="button"
-                                            id="btnAvancar">
-                                        Avançar
-                                    </button>
-                                </div>
-                            </div>
+#terceiraPergunta {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+    background-color: #ededed;
+}
 
-                            <form>
-                                <input type="hidden"
-                                       name="selected-option"
-                                       id="selected-option" />
-                                <!-- other form fields go here -->
-                            </form>
-                        </div>
-                    </div>
-                </form>
-                <form id="calcForm">
-                    <div id="segundaPergunta" style="display: none">
-                        <h2 class="text-center">Calculadora</h2>
-                        <div class="form-group">
-                            <div class="container">
-                                <h6 class="fw-bold">Qual seu nível de atividade física:</h6>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card2" data-option="1">
-                                            <h6></h6>
-                                            <p>Sedentário (Pouco ou nenhum exercício)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card2" data-option="2">
-                                            <h6></h6>
-                                            <p>
-                                                Pouco Ativo (Exercícios leves ou esportes 1-3 dias /
-                                                semana)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card2" data-option="3">
-                                            <h6></h6>
-                                            <p>
-                                                Moderadamente ativo (Exercício moderado ou esportes
-                                                3-5 dias / semana)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card2" data-option="4">
-                                            <h6></h6>
-                                            <p>
-                                                Muito ativo (Exercícios intensos ou esportes de 6-7
-                                                dias / semana)
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+#segundaDiv {
+    background-color: white;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.3);
+    background-color: #ededed;
+}
 
-                            <div class="alert alert-danger"
-                                 id="avisoPergunta2"
-                                 role="alert"
-                                 style="display: none">
-                                Selecione uma opção antes de avançar.
-                            </div>
+#imagem {
+    height: 50px;
+    border-radius: 50%; 
+  }
 
-                            <div class="form-group">
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary"
-                                            type="button"
-                                            id="btnAvancar2">
-                                        Avançar
-                                    </button>
-                                </div>
-                            </div>
+.card1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-                            <form>
-                                <input type="hidden"
-                                       name="selected-option"
-                                       id="selected-option" />
-                                <!-- other form fields go here -->
-                            </form>
-                        </div>
-                    </div>
-                    <!-- <div class="form-group">
-                            <select class="form-select" id="condicionamentoFisico" aria-label="Default select example">
-                                <option selected>Qual condicionamento físico mais se assemelha ao seu atual:</option>
-                                <option value="1">Abaixo do peso ideal</option>
-                                <option value="2">Próximo do peso ideal</option>
-                                <option value="3">Muito acima do peso</option>
-                                <option value="4">Atleta</option>
-                            </select>
-                        </div> -->
-                    <div class="container">
-                        <div id="terceiraPergunta" style="display: none">
-                            <h2 class="text-center">Calculadora</h2>
-                            <div class="form-group">
-                                <label for="genero" class="fw-bold">Gênero: </label>
-                                <div>
-                                    <label for="masculino" class="radio-inline">
-                                        <input type="radio"
-                                               name="genero"
-                                               id="masculino"
-                                               value="Masculino" />Masculino
-                                    </label>
-                                    <label for="feminino" class="radio-inline">
-                                        <input type="radio"
-                                               name="genero"
-                                               id="feminino"
-                                               value="Feminino" />Feminino
-                                    </label>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="range">
-                                <div class="d-inline-block align-middle fw-bold">Idade:</div>
-                                <div class="d-inline-block align-middle text-end">
-                                    <span id="idadeSlider"></span>
-                                </div>
-                                <input type="range"
-                                       class="form-range"
-                                       min="0"
-                                       max="100"
-                                       id="idadeRange" />
-                            </div>
-                            <br />
-                            <div class="range">
-                                <div class="d-inline-block align-middle fw-bold">Altura:</div>
-                                <div class="d-inline-block align-middle text-end">
-                                    <span id="alturaSlider"></span>
-                                </div>
-                                <input type="range"
-                                       class="form-range"
-                                       min="130"
-                                       max="230"
-                                       id="alturaRange" />
-                            </div>
-                            <br />
-                            <div class="range">
-                                <div class="d-inline-block align-middle fw-bold">Peso:</div>
-                                <div class="d-inline-block align-middle text-end">
-                                    <span id="pesoSlider"></span>
-                                </div>
-                                <input type="range"
-                                       class="form-range"
-                                       min="40"
-                                       max="180"
-                                       id="pesoRange" />
-                            </div>
-                            <br />
-                            <div class="alert alert-danger"
-                                 id="avisoPergunta3"
-                                 role="alert"
-                                 style="display: none">
-                                Selecione um gênero antes de avançar.
-                            </div>
+.card1.selected {
+    border-color: blue;
+}
 
-                            <div class="form-group">
-                                <div class="d-grid gap-2">
-                                    <input class="btn btn-primary"
-                                           id="btnCalcular"
-                                           type="submit"
-                                           value="Calcular" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="container">
-                        <div id="segundaDiv" style="display: none">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fa-solid fa-fire me-3"></i>
-                                                <div>
-                                                    <h5 class="card-title">Gasto Energético Diário:</h5>
-                                                    <p class="card-text" id="resultadoGasto"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fa-solid fa-drumstick-bite me-3"></i>
-                                                <div>
-                                                    <h5 class="card-title">Meta de Proteínas</h5>
-                                                    <p class="card-text" id="resultadoMeta"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mt-4">
-                                    <h5></h5>
-                                    <p class="fw-bold">Daqui a um ano você vai desejar ter começado hoje!</p>
-                                    <p class="fw-bold">Como você se vê daqui a um ano, daqui a 10 anos, daqui a 15 anos?</p>
-                                    <p class="fw-bold">"Loucura é querer resultados diferentes fazendo tudo exatamente igual!"</p>
-                                    <p class="fw-bold"> Vem comigo! Te garanto que com a minha ajuda pode ser mais simples que você imagina!</p>
-                                    <br>
-                                    <p class="fw-bold" id="agendeTexto">AGENDE SUA CONSULTA.</p>
-                                    <a href="https://api.whatsapp.com/send?phone=5527999873042&text=Ei%20nutri%20Aline%20Carvalho!%0A%0AGostaria%20de%20saber%20como%20funciona%20sua%20consulta%20para%20fazer%20o%20agendamento!">Clique aqui para agendar uma consulta!</a>
-                                </div>
-                                <p></p>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button"
-                                            id="btnVoltar"
-                                            class="btn btn-secondary">
-                                        Voltar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+.card2 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/f7133d8c4e.js"
-            crossorigin="anonymous"></script>
+.card2.selected {
+    border-color: blue;
+}
 
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+#headerFixa {
+    background-color: rgb(41 40 40);
+}
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+input[type=range]::-webkit-slider-thumb {
+    background-color: #0d6efd;
+}
 
-    <!-- Core theme JS-->
-    <script src="scripts.js"></script>
-</body>
-</html>
+input[type=range]::-moz-range-thumb {
+    background-color: #0d6efd;
+}
+
+input[type=range]::-ms-thumb {
+    background-color: #0d6efd;
+}
+
+#titulo {
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-weight: 700;
+    color: whitesmoke;
+}
