@@ -197,4 +197,4 @@ cards2.forEach(function(card) {
     });
     card.classList.add('selected');
   });
-});
+}); 
