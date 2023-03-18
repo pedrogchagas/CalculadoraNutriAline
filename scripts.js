@@ -129,10 +129,20 @@ $(document).ready(function() {
       }
     });
   
-    $('#btnVoltar').click(function() {
+    $('#btnInicio').click(function() {
       $('#primeiraDiv').show();
       $('#segundaDiv').hide();
       window.location.reload();
+    });
+
+    $('#btnVoltar').click(function() {
+      $('#primeiraPergunta').show();
+      $('#segundaPergunta').hide();
+    });
+
+    $('#btnVoltar2').click(function() {
+      $('#segundaPergunta').show();
+      $('#terceiraPergunta').hide();
     });
 
    $('#btnAvancar').click(function() {
