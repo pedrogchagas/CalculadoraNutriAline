@@ -9,6 +9,10 @@ body {
     color: rgb(247, 36, 36);
 }
 
+#obsProteina {
+    color: rgb(247, 36, 36);
+}
+
 .calculadora {
     height: 100vh;
     display: flex;
