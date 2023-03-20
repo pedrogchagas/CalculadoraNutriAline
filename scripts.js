@@ -27,8 +27,8 @@ $(document).ready(function() {
     var resultado1 = document.getElementById('resultadoGasto');
     var resultado2 = document.getElementById('resultadoMeta');
 
-    resultado1.textContent = result[0].toFixed(2) + 'kcal'
-    resultado2.textContent = result[1].toFixed(2) + 'g'
+    resultado1.textContent = parseFloat(result[0]).toFixed(2) + 'kcal'
+    resultado2.textContent = parseFloat(result[1]).toFixed(2) + 'g'
 
     // console.log(result);
   })
@@ -197,4 +197,4 @@ cards2.forEach(function(card) {
     });
     card.classList.add('selected');
   });
-}); 
+});
