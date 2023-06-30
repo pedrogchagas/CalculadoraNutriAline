@@ -1,11 +1,11 @@
 <h1>Site Nutricionista</h1>
-
-<div align="center">
-  <a href="https://alinecarvalhonutri.com">Clique aqui para acessar o Site</a>
-</div>
-
+<br>
 <div align="center">
   <a href="#-tecnologias">Tecnologias</a> | <a href="#-o-projeto">O Projeto</a>
+</div>
+<br>
+<div align="center">
+  <a href="https://alinecarvalhonutri.com">Clique aqui para acessar o Site</a>
 </div>
 <br>
 
